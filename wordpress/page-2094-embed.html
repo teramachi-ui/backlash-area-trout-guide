@@ -1,0 +1,83 @@
+<!-- wp:html -->
+<div id="backlash-area-trout-frame-wrap">
+  <iframe
+    id="backlash-area-trout-frame"
+    src="https://backlash-area-trout-guide.vercel.app/?embed=1"
+    title="BACKLASH エリアトラウト釣り場ガイド"
+    loading="eager"
+    scrolling="no"
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+</div>
+
+<style id="backlash-area-trout-page-style">
+  body.page-id-2094 #branding,
+  body.page-id-2094 #header-menu,
+  body.page-id-2094 #secondary,
+  body.page-id-2094 #colophon,
+  body.page-id-2094 .entry-header,
+  body.page-id-2094 .entry-meta {
+    display: none !important;
+  }
+
+  body.page-id-2094,
+  body.page-id-2094 #page,
+  body.page-id-2094 #main,
+  body.page-id-2094 #main > .wrapper,
+  body.page-id-2094 .content-sidebar-wrap,
+  body.page-id-2094 #primary,
+  body.page-id-2094 #content,
+  body.page-id-2094 #post-2094,
+  body.page-id-2094 .entry-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  body.page-id-2094 {
+    background: #f4f5ef !important;
+  }
+
+  #backlash-area-trout-frame-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: #f4f5ef;
+  }
+
+  #backlash-area-trout-frame {
+    display: block;
+    width: 100%;
+    height: 9000px;
+    min-height: 100vh;
+    border: 0;
+    background: #f4f5ef;
+  }
+
+  @media (max-width: 700px) {
+    #backlash-area-trout-frame {
+      height: 18000px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    if (window.__backlashAreaTroutEmbedReady) return;
+    window.__backlashAreaTroutEmbedReady = true;
+
+    var frame = document.getElementById("backlash-area-trout-frame");
+    if (!frame) return;
+
+    window.addEventListener("message", function (event) {
+      if (event.origin !== "https://backlash-area-trout-guide.vercel.app") return;
+      if (!event.data || event.data.type !== "backlash-area-trout-height") return;
+
+      var height = Number(event.data.height);
+      if (!Number.isFinite(height) || height < 600 || height > 30000) return;
+      frame.style.height = Math.ceil(height) + "px";
+    });
+  })();
+</script>
+<!-- /wp:html -->

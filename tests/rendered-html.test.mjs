@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readdir } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -58,4 +58,17 @@ test("includes the complete venue image set", async () => {
     access(new URL("atmosphere-atlas.webp", venueRoot)),
     access(new URL("../public/og.webp", import.meta.url)),
   ]);
+});
+
+test("includes the WordPress embed bridge", async () => {
+  const [pageSource, embedMarkup] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../wordpress/page-2094-embed.html", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(pageSource, /backlash-area-trout-height/);
+  assert.match(pageSource, /https:\/\/backlash-shop\.com/);
+  assert.match(embedMarkup, /backlash-area-trout-guide\.vercel\.app\/\?embed=1/);
+  assert.match(embedMarkup, /event\.origin !== "https:\/\/backlash-area-trout-guide\.vercel\.app"/);
+  assert.match(embedMarkup, /body\.page-id-2094 #branding/);
 });

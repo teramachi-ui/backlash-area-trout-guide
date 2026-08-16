@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Region = "東海" | "甲信越" | "関西" | "関東" | "東北";
 
@@ -48,6 +48,33 @@ const regionOptions = ["すべて", "東海", "甲信越", "関西", "関東", "
 export default function Home() {
   const [region, setRegion] = useState<(typeof regionOptions)[number]>("すべて");
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    const isWordPressEmbed = new URLSearchParams(window.location.search).get("embed") === "1";
+    if (!isWordPressEmbed || window.parent === window) return;
+
+    const sendHeight = () => {
+      const content = document.querySelector("main");
+      const height = Math.ceil(content?.getBoundingClientRect().height ?? document.body.scrollHeight);
+      window.parent.postMessage({ type: "backlash-area-trout-height", height }, "https://backlash-shop.com");
+    };
+
+    const content = document.querySelector("main");
+    const observer = new ResizeObserver(sendHeight);
+    observer.observe(content ?? document.body);
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
+
+    const initialTimers = [100, 500, 1500].map((delay) => window.setTimeout(sendHeight, delay));
+    sendHeight();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("load", sendHeight);
+      window.removeEventListener("resize", sendHeight);
+      initialTimers.forEach((timer) => window.clearTimeout(timer));
+    };
+  }, []);
 
   const filteredVenues = useMemo(() => {
     const normalized = query.trim().toLowerCase();
