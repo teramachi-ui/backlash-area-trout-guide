@@ -25,7 +25,9 @@ test("renders the area-trout guide", async () => {
   assert.match(html, /いい水、/);
   assert.match(html, /フィッシング＆カフェ サンクチュアリ/);
   assert.match(html, /あいづフィッシングエリア/);
-  assert.match(html, /\/og\.png/);
+  assert.match(html, /\/venues\/aizu\.webp/);
+  assert.match(html, /\/og\.webp/);
+  assert.doesNotMatch(html, /26 SPOTS|26の管理釣り場|管理釣り場26か所/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
 
@@ -42,6 +44,18 @@ test("includes the complete venue image set", async () => {
     access(new URL("samegai.webp", venueRoot)),
     access(new URL("arcus-yaizu.webp", venueRoot)),
     access(new URL("gozu.webp", venueRoot)),
-    access(new URL("../public/og.png", import.meta.url)),
+    access(new URL("aizu.webp", venueRoot)),
+    access(new URL("arcus-utsunomiya.webp", venueRoot)),
+    access(new URL("kingfisher.webp", venueRoot)),
+    access(new URL("joyvalley.webp", venueRoot)),
+    access(new URL("midori.webp", venueRoot)),
+    access(new URL("lakewood.webp", venueRoot)),
+    access(new URL("oashigawa.webp", venueRoot)),
+    access(new URL("nakatsugawa.webp", venueRoot)),
+    access(new URL("higashiyamako.webp", venueRoot)),
+    access(new URL("motai.webp", venueRoot)),
+    access(new URL("masukura.webp", venueRoot)),
+    access(new URL("atmosphere-atlas.webp", venueRoot)),
+    access(new URL("../public/og.webp", import.meta.url)),
   ]);
 });

@@ -26,21 +26,21 @@ const venues: Venue[] = [
   { name: "さかなのさとすぎしま", prefecture: "岐阜", region: "東海", note: "板取川沿いで釣りとBBQを楽しめる自然派エリア", url: "https://sakananosato.com/", image: "/venues/venue-04.webp", photo: false },
   { name: "美濃フィッシングエリア", prefecture: "岐阜", region: "東海", note: "清流の里で過ごす、緑に囲まれたフィールド", url: "https://www.mino-fa.com/", image: "/venues/venue-05.webp", photo: false },
   { name: "月見ヶ原FC", prefecture: "岐阜", region: "東海", note: "長良川水系で楽しむ冬季のルアーフィールド", url: "https://www.nagaragawachuoh.or.jp/ryouyuu_annai/ryouyuu_annai_04.htm", image: "/venues/venue-06.webp", photo: false },
-  { name: "フィッシング母袋", prefecture: "岐阜", region: "東海", note: "標高700mの山あいで魚と向き合うポンド", url: "https://www.motai.info/", image: "/venues/venue-07.webp", photo: false },
-  { name: "釣り＆キャンプ 鱒蔵", prefecture: "岐阜", region: "東海", note: "アウトドアの一日をゆったり楽しめる釣り場", url: "https://masukura-2.jimdosite.com/", image: "/venues/venue-08.webp", photo: false },
-  { name: "アルクスポンド宇都宮", prefecture: "栃木", region: "関東", note: "都市近郊から通いやすい本格ポンドエリア", url: "https://www.arcus-pond.com/", image: "/venues/venue-09.webp", photo: false },
+  { name: "フィッシング母袋", prefecture: "岐阜", region: "東海", note: "標高700mの山あいで魚と向き合うポンド", url: "https://www.motai.info/", image: "/venues/motai.webp", photo: true },
+  { name: "釣り＆キャンプ 鱒蔵", prefecture: "岐阜", region: "東海", note: "アウトドアの一日をゆったり楽しめる釣り場", url: "https://masukura-2.jimdosite.com/", image: "/venues/masukura.webp", photo: true },
+  { name: "アルクスポンド宇都宮", prefecture: "栃木", region: "関東", note: "都市近郊から通いやすい本格ポンドエリア", url: "https://www.arcus-pond.com/", image: "/venues/arcus-utsunomiya.webp", photo: true },
   { name: "五頭フィッシングパーク", prefecture: "新潟", region: "甲信越", note: "山並みを望む、新潟の人気フィールド", url: "https://www.gozu-fp.jp/", image: "/venues/gozu.webp", photo: true },
-  { name: "アングラーズパーク キングフィッシャー", prefecture: "栃木", region: "関東", note: "トラウトもバスも楽しめる複合フィールド", url: "https://kingfisher-tochigi.com/", image: "/venues/venue-10.webp", photo: false },
-  { name: "ジョイバレー ルアー・フライ", prefecture: "千葉", region: "関東", note: "里山の空気に包まれた静かなポンド", url: "https://www.joyvalley.co.jp/", image: "/venues/venue-11.webp", photo: false },
+  { name: "アングラーズパーク キングフィッシャー", prefecture: "栃木", region: "関東", note: "トラウトもバスも楽しめる複合フィールド", url: "https://kingfisher-tochigi.com/", image: "/venues/kingfisher.webp", photo: true },
+  { name: "ジョイバレー ルアー・フライ", prefecture: "千葉", region: "関東", note: "里山の空気に包まれた静かなポンド", url: "https://www.joyvalley.co.jp/", image: "/venues/joyvalley.webp", photo: true },
   { name: "足柄キャスティングエリア", prefecture: "神奈川", region: "関東", note: "足柄の山々を近くに感じるフィールド", url: "https://www.ashigara-ca.com/", image: "/venues/venue-12.webp", photo: false },
-  { name: "大芦川F&Cフィールドビレッジ", prefecture: "栃木", region: "関東", note: "清流の気配を感じる自然豊かなエリア", url: "http://park10.wakwak.com/~fishing/", image: "/venues/venue-13.webp", photo: false },
-  { name: "みどりフィッシングエリア", prefecture: "栃木", region: "関東", note: "山間の景色と水辺をゆっくり楽しむポンド", url: "https://ms3103.blog.fc2.com/", image: "/venues/venue-14.webp", photo: false },
-  { name: "フィッシングフィールド中津川", prefecture: "神奈川", region: "関東", note: "中津川水系の自然に近い管理釣り場", url: "https://www.nakatugawa-gyokyou.jp/index.html", image: "/venues/venue-15.webp", photo: false },
-  { name: "レイクウッドリゾート", prefecture: "栃木", region: "関東", note: "自然と食事を一緒に楽しめる水辺のリゾート", url: "https://lakewoodresort.info/", image: "/venues/venue-16.webp", photo: false },
+  { name: "大芦川F&Cフィールドビレッジ", prefecture: "栃木", region: "関東", note: "清流の気配を感じる自然豊かなエリア", url: "http://park10.wakwak.com/~fishing/", image: "/venues/oashigawa.webp", photo: true },
+  { name: "みどりフィッシングエリア", prefecture: "栃木", region: "関東", note: "山間の景色と水辺をゆっくり楽しむポンド", url: "https://ms3103.blog.fc2.com/", image: "/venues/midori.webp", photo: true },
+  { name: "フィッシングフィールド中津川", prefecture: "神奈川", region: "関東", note: "中津川水系の自然に近い管理釣り場", url: "https://www.nakatugawa-gyokyou.jp/index.html", image: "/venues/nakatsugawa.webp", photo: true },
+  { name: "レイクウッドリゾート", prefecture: "栃木", region: "関東", note: "自然と食事を一緒に楽しめる水辺のリゾート", url: "https://lakewoodresort.info/", image: "/venues/lakewood.webp", photo: true },
   { name: "加賀フィッシングエリア", prefecture: "栃木", region: "関東", note: "北関東最大級のスケールを誇るポンドエリア", url: "https://kaga-fishingarea.jp/", image: "/venues/venue-17.webp", photo: false },
   { name: "すそのフィッシングパーク", prefecture: "静岡", region: "東海", note: "富士山麓の変化ある池を楽しむ人気エリア", url: "https://www.susono-f-park.com/", image: "/venues/venue-18.webp", photo: false },
-  { name: "東山湖フィッシングエリア", prefecture: "静岡", region: "東海", note: "富士を望む湖畔でロングキャストを楽しむ", url: "https://www.higashiyamako.com/", image: "/venues/venue-19.webp", photo: false },
-  { name: "あいづフィッシングエリア", prefecture: "福島", region: "東北", note: "会津の山あいで季節の空気を楽しむポンド", url: "https://aizufishing.jp/", image: "/venues/venue-20.webp", photo: false },
+  { name: "東山湖フィッシングエリア", prefecture: "静岡", region: "東海", note: "富士を望む湖畔でロングキャストを楽しむ", url: "https://www.higashiyamako.com/", image: "/venues/higashiyamako.webp", photo: true },
+  { name: "あいづフィッシングエリア", prefecture: "福島", region: "東北", note: "会津の山あいで季節の空気を楽しむポンド", url: "https://aizufishing.jp/", image: "/venues/aizu.webp", photo: true },
 ];
 
 const regionOptions = ["すべて", "東海", "甲信越", "関西", "関東", "東北"] as const;
@@ -72,16 +72,12 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <img className="hero-image" src="/venues/atmosphere-atlas.png" alt="さまざまなエリアトラウト釣り場の雰囲気イメージ" />
+        <img className="hero-image" src="/venues/atmosphere-atlas.webp" alt="さまざまなエリアトラウト釣り場の雰囲気イメージ" />
         <div className="hero-shade" />
         <div className="hero-inner">
           <p className="eyebrow">AREA TROUT / FIELD GUIDE</p>
           <h1>いい水、<br />いい時間。</h1>
-          <p className="hero-copy">東海から関東・東北まで。BACKLASHスタッフが足を運んだ、26の管理釣り場をめぐるフィールドガイド。</p>
-          <div className="hero-meta" aria-label="掲載情報">
-            <span><strong>26</strong> SPOTS</span>
-            <span><strong>5</strong> REGIONS</span>
-          </div>
+          <p className="hero-copy">東海から関東・東北まで。BACKLASHスタッフが足を運んだ管理釣り場をめぐるフィールドガイド。</p>
         </div>
         <a className="hero-jump" href="#spots">EXPLORE <span aria-hidden="true">↓</span></a>
       </section>

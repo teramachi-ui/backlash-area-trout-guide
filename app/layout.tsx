@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 
 const title = "エリアトラウト釣り場ガイド | LURE & BOAT BACKLASH";
-const description = "BACKLASHスタッフが訪れた管理釣り場26か所を、地域と雰囲気から探せるフィールドガイド。";
+const description = "BACKLASHスタッフが訪れた管理釣り場を、地域と雰囲気から探せるフィールドガイド。";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -24,13 +24,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       type: "website",
       locale: "ja_JP",
-      images: [{ url: "/og.png", width: 1733, height: 909, alt: "AREA TROUT FIELD GUIDE" }],
+      images: [{ url: "/og.webp", width: 1733, height: 909, alt: "AREA TROUT FIELD GUIDE" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: ["/og.webp"],
     },
   };
 }
