@@ -18,6 +18,7 @@ const venues: Venue[] = [
   { name: "フィッシング＆カフェ サンクチュアリ", prefecture: "三重", region: "東海", note: "カフェと複数ポンドを楽しめるフィールド", url: "https://go-sanctuary.com/", image: "/venues/sanctuary.webp", photo: true },
   { name: "フィッシングキャンプエリア瑞浪", prefecture: "岐阜", region: "東海", note: "釣りとキャンプを一緒に楽しめるエリア", url: "https://www.fishing-autocamp-mizunami.com/", image: "/venues/mizunami.webp", photo: true },
   { name: "平谷湖フィッシングスポット", prefecture: "長野", region: "甲信越", note: "南信州の高原に広がる開放的なフィールド", url: "https://hirayako.com/", image: "/venues/hirayako.webp", photo: true },
+  { name: "ハーブの里フィッシングエリア", prefecture: "長野", region: "甲信越", note: "安曇野の湧水を引き入れた澄んだポンド", url: "http://www13.plala.or.jp/herb-fa/", image: "/venues/S__70434819.jpg", photo: true },
   { name: "醒ヶ井養鱒場", prefecture: "滋賀", region: "関西", note: "清らかな水に囲まれた歴史ある養鱒場", url: "https://samegai.siga.jp/", image: "/venues/samegai.webp", photo: true },
   { name: "アルクスポンド焼津", prefecture: "静岡", region: "東海", note: "港町で気軽に楽しめるポンドエリア", url: "https://www.arcus-pond.com/wp/shisetsu/%E3%82%A2%E3%83%AB%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%B3%E3%83%89%E7%84%BC%E6%B4%A5/", image: "/venues/arcus-yaizu.webp", photo: true },
   { name: "北方 川釣り体験場", prefecture: "愛知", region: "東海", note: "川の流れを感じながら狙うルアー専用エリア", url: "https://kawaturitaikenjyou.on.omisenomikata.jp/", image: "/venues/venue-01.webp", photo: false },
@@ -38,7 +39,7 @@ const venues: Venue[] = [
   { name: "フィッシングフィールド中津川", prefecture: "神奈川", region: "関東", note: "中津川水系の自然に近い管理釣り場", url: "https://www.nakatugawa-gyokyou.jp/index.html", image: "/venues/nakatsugawa.webp", photo: true },
   { name: "レイクウッドリゾート", prefecture: "栃木", region: "関東", note: "自然と食事を一緒に楽しめる水辺のリゾート", url: "https://lakewoodresort.info/", image: "/venues/lakewood.webp", photo: true },
   { name: "加賀フィッシングエリア", prefecture: "栃木", region: "関東", note: "北関東最大級のスケールを誇るポンドエリア", url: "https://kaga-fishingarea.jp/", image: "/venues/venue-17.webp", photo: false },
-  { name: "すそのフィッシングパーク", prefecture: "静岡", region: "東海", note: "富士山麓の変化ある池を楽しむ人気エリア", url: "https://www.susono-f-park.com/", image: "/venues/venue-18.webp", photo: false },
+  { name: "すそのフィッシングパーク", prefecture: "静岡", region: "東海", note: "富士山麓の変化ある池を楽しむ人気エリア", url: "https://www.susono-f-park.com/", image: "/venues/S__70434820.jpg", photo: true },
   { name: "東山湖フィッシングエリア", prefecture: "静岡", region: "東海", note: "富士を望む湖畔でロングキャストを楽しむ", url: "https://www.higashiyamako.com/", image: "/venues/higashiyamako.webp", photo: true },
   { name: "あいづフィッシングエリア", prefecture: "福島", region: "東北", note: "会津の山あいで季節の空気を楽しむポンド", url: "https://aizufishing.jp/", image: "/venues/aizu.webp", photo: true },
 ];
